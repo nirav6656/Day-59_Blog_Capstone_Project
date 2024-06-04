@@ -2,7 +2,7 @@ import requests
 from flask import Flask, render_template
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', static_url_path='/static')
 api_endpoint = "https://api.npoint.io/8152213a3b7dd208d23f"
 @app.route('/')
 def home_page():
